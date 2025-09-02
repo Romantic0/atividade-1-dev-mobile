@@ -1,0 +1,20 @@
+{
+  "name": "Meu Site Responsivo",
+  "short_name": "Site",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077cc",
+  "icons": [
+    {
+      "src": "images/download.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/download.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
