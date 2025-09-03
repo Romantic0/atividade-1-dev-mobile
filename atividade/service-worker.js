@@ -9,7 +9,7 @@ const FILES_TO_CACHE = [
   "/images/download.png"
 ];
 
-// Instala e adiciona arquivos ao cache
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -19,7 +19,6 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// Ativa e remove caches antigos
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keyList) =>
@@ -35,7 +34,6 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Intercepta requisições e serve do cache
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
